@@ -7,29 +7,34 @@ namespace Dio_Series
     public class SerieRepositorio : IRepositorio<Serie>
     {
         private List<Serie> listaSerie = new List<Serie>();
-        public void Atuaza(int id, Serie entidade)
+        public void Atuaza(int id, Serie objeto)
         {
-            throw new NotImplementedException();
+            listaSerie[id]=objeto;
         }
 
         public void Exclui(int id)
         {
-            throw new NotImplementedException();
+            listaSerie[id].Excluir();
+        }
+
+        public void Insere(Serie entidade)
+        {
+            listaSerie.Add(entidade);
         }
 
         public List<Serie> Lista()
         {
-            throw new NotImplementedException();
+            return listaSerie;
         }
 
         public int ProximoID()
         {
-            throw new NotImplementedException();
+            return listaSerie.Count;
         }
 
-        public Serie RetornaPorID(Serie entidade)
+        public Serie RetornaPorID(int id)
         {
-            throw new NotImplementedException();
+            return listaSerie[id];
         }
     }
 }
