@@ -29,6 +29,7 @@ namespace Dio_Series
             retorno+="Titulo: " + this.Titulo + Environment.NewLine;
             retorno+="Descrição: " + this.Descricao + Environment.NewLine;
             retorno+="Ano de Inicio: " + this.Ano + Environment.NewLine;
+            retorno+="Excluido: " + this.Excluido;
             return retorno;
         }//toString
 
@@ -37,6 +38,10 @@ namespace Dio_Series
         }
         public int retornaID(){
             return this.Id;
+        }
+
+        public bool retornaExcluido(){
+            return this.Excluido;
         }
 
         public void Excluir(){
